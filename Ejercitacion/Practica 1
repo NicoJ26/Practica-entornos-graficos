@@ -213,7 +213,8 @@ Los metadatos son esenciales para:
     </tr>
     </table>
     Tabla contenida en un ancho de 200 píxeles, que tiene una fila con una celda que abarca las tres columnas (colspan="3") y contiene un div alineado al centro con el texto "Título". Las siguientes filas tienen celdas con fondo gris claro (#dddddd) y están vacías, representadas por &nbsp; para mantener su tamaño.
-<!-- 3)f) -->
+
+    <!-- 3)f) -->
     <table width="200">
     <tr>
     <td colspan="3"><div
@@ -231,3 +232,112 @@ Los metadatos son esenciales para:
     </table>
     Tabla contnida en un ancho de 200 pixeles, que tiene que tiene una fila con una celda que abarca las tres columnas (colspan="3") y contiene un div alineado al centro con el texto "Título". Las siguientes filas tienen celdas con fondo gris claro (#dddddd) y están vacías, representadas por &nbsp; para mantener su tamaño.
            
+<!-- 3)g) -->
+    <table width="200" border="1">
+    <tr>
+    <td colspan="3"><div
+    align="center">Título</div></td>
+    </tr>
+    <tr>
+    <td colspan="2"rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td width="50%">&nbsp;</td>
+    </tr>
+    </table>
+    Tabla de 200 píxeles de ancho, con 3 columnas. La primera fila contiene un título centrado que ocupa las tres columnas. Debajo, hay dos filas donde aparece una celda grande a la izquierda que ocupa dos columnas y se extiende a lo largo de ambas filas, y a la derecha queda una columna con dos celdas más pequeñas, una en cada fila.
+
+    <table width="200" border="1" cellpadding="0"
+    cellspacing="0">
+    <tr>
+    <td colspan="2"><div
+    align="center">Título</div></td>
+    </tr>
+    <tr>
+    <td rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td width="50%">&nbsp;</td>
+    </tr>
+    </table>
+    Tabla de 200 píxeles de ancho, con 2 columnas. La primera fila contiene un título centrado que ocupa ambas columnas. Debajo, hay dos filas en las que la primera columna está formada por una celda que se extiende a lo largo de las dos filas, mientras que la segunda columna contiene dos celdas independientes, una en cada fila.
+
+<!-- 3)h) -->
+    <form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+    <fieldset>
+    <legend>LOGIN</legend>
+    Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+    Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+    </fieldset>
+    <input type="submit" id="boton1" name="boton1" value="Enviar" />
+    </form>
+    Un formulario con un campo de texto para el usuario, un campo de contraseña para la contraseña, y un botón de envío. El formulario está contenido dentro de un fieldset con una leyenda que dice "LOGIN". Al enviar el formulario, los datos se envían a "procesar.php" utilizando el método POST, y se abre en una nueva pestaña del navegador debido al atributo target="_blank".
+
+    <form id="form2" name="form2" action="" method="get" target="_blank">
+    LOGIN<br />
+    <label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+    <label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+    <input type="submit" id="boton2" name="boton2" value="Enviar" />
+    </form>
+    Un formulario de login con 2 campos, uno para el usuario y otro para la contraseña, las etiquetas estan asiciadas mediante la etiqueta <label>, el formulario se envía utilizando el método GET a la misma url (action="") y se abre en una nueva pestaña del navegador debido al atributo target="_blank".
+
+    <form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+    ost" target="_blank">
+    <fieldset>
+    <legend>LOGIN</legend>
+    Usuario: <input type="text" id="usu3" name="usu3" /><br />
+    Clave: <input type="password" id="clave3" name="clave3" />
+    </fieldset>
+    <input type="reset" id="boton3" name="boton3" value=
+    "Enviar" />
+    </form>
+    Un formulario de login con 2 campos, uno para el usuario y otro para la contraseña pero dicha contraseña esta oculta, el form esta configurado para enviar datos por mail usando mailto:, el formulario se envía utilizando el método POST y se abre en una nueva pestaña del navegador debido al atributo target="_blank". El botón de envío es en realidad un botón de reset, lo que significa que al hacer click en él se borrarán los datos ingresados en el formulario en lugar de enviarlos.
+
+<!-- 3)i) -->
+    <label>Botón 1
+    <button type="button" name="boton1" id="boton1">
+    <img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+    <b>CLICK AQUÍ</b></button></label>
+    Es un boton que muestra una imagen, con un texto en negrita que dice "CLICK AQUI"
+
+    <label>Botón 2
+    <input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+    </label>
+    Es un botón con el texto "CLICK AQUÍ" pero sin imagen, es un botón de tipo "button" que no tiene una función específica asignada, por lo que al hacer click en él no ocurrirá nada a menos que se le asigne una función.
+
+<!-- 3)j) -->
+    <p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+    <label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+    Es un grupo de botones de opción (radio buttons) que permite seleccionar una sola opción entre "X" e "Y". Ambos botones comparten el mismo nombre "opcion", lo que garantiza que solo se pueda seleccionar uno a la vez. Cada botón tiene un valor asociado (X o Y) que se enviará al servidor cuando se envíe el formulario.
+
+    <p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br /> 
+    <label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+    Es un grupo de botones de opción (radio buttons) que permite seleccionar una opción entre "X" e "Y", pero en este caso cada botón tiene un nombre diferente ("opcion1" y "opcion2"), lo que significa que ambos botones pueden ser seleccionados al mismo tiempo, lo que no es el comportamiento típico de los radio buttons.
+
+<!-- 3)k) -->
+    <select name="lista"> 
+    <optgroup label="Caso 1"> 
+    <option>Mayo</option> 
+    <option>Junio</option> 
+    </optgroup> 
+    <optgroup label="Caso 2"> 
+    <option>Mayo</option> 
+    <option>Junio</option> 
+    </optgroup> 
+    </select>
+    Es una lista desplegable que contiene dos grupos de opciones etiquetados como "Caso 1" y "Caso 2". Cada grupo contiene dos opciones: "Mayo" y "Junio". Al hacer clic en la lista desplegable, se mostrarán ambas opciones agrupadas bajo sus etiquetas, permitiendo al usuario seleccionar una de ellas.
+
+    <select name="lista[]" multiple="multiple"> 
+    <optgroup label=" Caso 1"> 
+    <option>Mayo</option> 
+    <option>Junio</option> 
+    </optgroup> 
+    <optgroup label=" Caso 2"> 
+    <option>Mayo</option> 
+    <option>Junio</option> 
+    </optgroup> 
+    </select>
+    Es una lista desplegable que permite seleccionar múltiples opciones. Contiene dos grupos de opciones etiquetados como "Caso 1" y "Caso 2", cada uno con las opciones "Mayo" y "Junio". El atributo multiple="multiple" permite al usuario seleccionar más de una opción a la vez, y el nombre "lista[]" indica que se enviará un array de valores al servidor cuando se envíe el formulario.
+   
