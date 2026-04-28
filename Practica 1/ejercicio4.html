@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="last-modified" content="2008-01-01" />
+        <title>Ejercitacion 4</title>
+    </head>
+
+    <body>
+        <a href="https://www.frro.utn.edu.ar/">
+            <img src="http://uai.edu.ar/ciiti/2019/auspiciantes/img/168s.jpg" alt="Logo de la UTN" width="180" />
+        </a>
+
+        <hr style="width:100%; border: 2px solid black;">
+
+        <h1>AÑO 2008</h1>
+        
+        <!--Creo la tabla-->
+        <table border="1">
+            <tr>
+                <th colspan="2">Exámenes</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Fecha: …………………</td>
+                <td>Aprobados</td>
+            </tr>
+            <tr>
+                <td>24/30</td>
+        </table>
+
+        <!--Creo enlaces-->
+        <ol>
+            <li>
+                <a href="Enuncuado">Enuncuado del examen</a>
+            </li>
+            <li>
+                <a href="Resolucion">Resolucion del examen</a>
+            </li>
+        </ol>
+    
+        <p>Puede realizar consultas completando el formulario</p>
+        
+        <style>
+            label {
+                display: inline-block;
+                width:80px;
+                vertical-align:top;
+                margin-top: 10px;
+            }
+
+            input,textarea {
+                margin-top: 10px;
+            }
+
+            .botones{
+                margin-left: 60px;
+                width: 200px;
+                text-align: right;
+                margin-top: 10px;
+            }
+        </style>
+
+        <form action="mailto:x@x.com" method="post" enctype="text/plain">
+        
+        <label>e-mail:</label>
+        <input type="text" name="email" class="campo" /><br />
+
+        <label>consulta:</label>
+        <textarea name="consulta" rows="4" cols="19" class="campo"></textarea><br />
+
+        <div class="botones">
+            <input type="submit" value="ENVIAR" />
+            <input type="reset" value="BORRAR" />
+        </div>
+
+        </form>
+        
+        <h2>Enunciado del examen</h2>
+        <div>
+            <p>Ejercicio 1: ..................................................</p>
+            <p>Ejercicio 2: ..................................................</p>
+        </div>
+
+        <style>
+            div p {
+                margin-left: 20px;
+            }
+        </style>
+
+        <p>
+            Para mas informacion dirigirse a <a href="mailto:contacto@xx.com">contacto@xx.com</a>.
+        </p>
+
+    </body>
+</html>
