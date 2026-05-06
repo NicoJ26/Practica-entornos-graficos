@@ -1,0 +1,242 @@
+Ejercicio 1:
+    1. ¿ Qué es CSS y para qué se usa? CSS (Cascading Style Sheets u Hojas de Estilo en Cascada) es un lenguaje de hojas de estilo que se utiliza para definir la apariencia y el formato de un documento HTML.
+        Sirve para controlar aspectos como colores, fuentes, tamaños, márgenes, espaciado y la disposición de los elementos en la página, separando el contenido (HTML) del diseño.
+    
+    2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan? CSS funciona mediante reglas que están compuestas por:
+        - Selector: indica a qué elementos HTML se aplicará el estilo.
+        - Propiedad: define qué aspecto se va a modificar (ej: color).
+        - Valor: especifica cómo se verá ese aspecto (ej: rojo).
+    
+    3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+        - En línea (inline): directamente en la etiqueta HTML usando el atributo  style.
+        - Interno (en la cabecera): dentro de la etiqueta <style> en el <head> del documento.
+        - Externo: mediante un archivo .css separado vinculado al HTML.
+    
+    4. ¿ Cuáles son los distintos tipos de selectores más utilizados?  
+    Ejemplifique cada uno. 
+        - Selector de etiqueta (elemento): p { color: blue; } , esto se aplica a todos los parrafos.
+        - Selector agrupado: h1, h2, h3 { color: red; } , esto aplica a varios elementos un mismo estilo.
+    
+    5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos? Una pseudo-clase es una forma de definir el estado especial de un elemento
+
+        Las más utilizadas en vinculos son:
+            - :link , vinculo no visitado.
+            - :visited , vinculo visitado.
+            . :hover , mouse encima.
+            . :active , cuando se realiza un click
+
+    6. ¿ Qué es la herencia? La herencia es el mecanismo por el cual algunos estilos definidos en un elemento padre se transmiten a sus elementos hijos.
+    
+    7. ¿ En qué consiste el proceso denominado cascada? La cascada es el proceso mediante el cual el navegador decide qué estilos aplicar cuando existen múltiples reglas que afectan a un mismo elemento.
+
+        Tiene en cuenta:
+            - El origen del estilo (inline, interno o externo)
+            - La especificidad del selector
+            - El orden en que aparecen las reglas
+
+Ejercicio 2 
+    p#normal { 
+    font-family: arial,helvetica; 
+    font-size: 11px; 
+    font-weight: bold; 
+    } 
+
+    *#destacado { 
+    border-style: solid; 
+    border-color: blue; 
+    border-width: 2px; 
+    } 
+
+    #distinto { 
+    background-color: #9EC7EB; 
+    color: red; 
+    } 
+
+    <p id="normal">Este es un párrafo</p> , en este parrafo solo se aplica el estilo #normal, este produce un efeto de fuente arial o helvetica , tamaño de 11px y su texto resaltado en negrita.
+
+    <p id="destacado">Este es otro párrafo</p> , en este parrafo solo se aplica el estilo #destacado, este produce un efeto de borde solido, su borde de color azul y un grosor de 2px.
+    
+    <table id="destacado"><tr><td>Esta es una tabla</td></tr></table> , en esta tabla solo se aplica el estilo #destacado, este produce un borde solido, su borde de color azul y un grosor de 2px.
+    
+    <p id="distinto">Este es el último párrafo</p> , en este parrafo solo se aplica el estilo #distinto, este produce un fondo de color celeste y texto de color rojo.
+
+Ejercicio 3 
+    p.quitar { 
+    color: red; 
+    } 
+    
+    *.desarrollo { 
+    font-size: 8px; 
+    } 
+    .importante { 
+    font-size: 20px; 
+    } 
+    
+    <p class="desarrollo">  
+    En este primer párrafo trataremos lo siguiente: 
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx 
+    </p> 
+    Produce un efecto de tamaño de letra de 8px.
+    
+    <p class="quitar"> 
+    Este párrafo debe ser quitado de la obra… 
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx 
+    </p> 
+    Produce un efecto de color de texto en rojo. 
+
+    <p > 
+    </p> 
+    En este otro párrafo trataremos otro tema:<br /> 
+    xxxxxxxxxxxxxxxxxxxxxxxxx 
+    Ninguna regla aplicada no esta dentro de un <p > </p> con alguna clase , su es efecto es un texto normal.  
+    
+    <p class="importante"> 
+    Y este es el párrafo más importante de la obra… 
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx 
+    </ p> 
+    Produce un efecto de tamaño de letra de 20px.
+
+    <h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1> , no se aplica la regla ya que no es un parrafo en un titulo h1. 
+    
+    <p class="quitar importante">Se pueden aplicar varias clases a la vez</p> , produce un efecto de texto color rojo y tamaño de letra de 20px.
+
+Ejercicio 4
+    * {color:green; } 
+    a:link {color:gray } 
+    a:visited{color:blue } 
+    a:hover {color:fuchsia } 
+    a:active {color:red } 
+    p {font-family: arial,helvetica;font-size: 10px;color:black; } 
+    .contenido{font-size: 14px;font-weight: bold; }
+
+    <body> 
+    <p class="contenido" style="font-weight: normal;"> 
+    Este es un texto ...............</p> 
+    Este parrajo va a obtener un color negro, fuente arial/helvetica y un tamaño de 14px 
+
+    <table> 
+    <tr> 
+    <td>Y esta es una tabla.......</td> 
+    </tr> 
+    <tr> 
+    <td><a href="http://www.google.com.ar">con un 
+    enlace</a></td> 
+    </tr> 
+    </table> 
+    La tabla va a obtener un color verde en sus textos y un tamaño y funete por defecto
+    En los enlaces se sobrescriben los colores por lo tanto el enlace "normal" obtiene un color gris, el enlace "visitado" un color azul, el "hover" un color fucsia y el ":active" un color rojo.
+
+    </body> 
+
+
+    <body class="contenido"> 
+    <p> Este es un texto................</p> 
+    <table> 
+    <tr> 
+    <td>Y esta es una tabla.......</td> 
+    </tr> 
+    <tr> 
+    <td><a href="http://www.google.com.ar">con 
+    un enlace</a></td> 
+    </tr> 
+    </table> 
+    </body> 
+
+    Los cambios que se realizaron fueron:
+        - Todo el body va a contener el estilo de "contenido".
+        - Los parrafos con texto verde, el estilo de "contenido" heredado y un tamaño de 10px y texto color negro.
+        - La tabla adopta el color verde y el estilo de "contenido" heredado que genera un tamaño de 14px y negrita.
+        - Los enlaces heredan tamaño 14px, texto en negrita y adoptan un color gris, azul, fucsia, rojo segun su estado.
+
+Ejercicio 5
+    1. Los textos enfatizados dentro de cualquier título deben ser rojos. 
+    
+        h1, h2, h3, h4, h5, h6 { 
+            color: red; 
+        } 
+
+    2. Cualquier elemento que tenga asignado el atributo "href" y que esté dentro de cualquier párrafo que a 
+    su vez esté dentro de un bloque debe ser color negro.
+    
+        div p [href]{
+            color: black;
+        }
+
+    3. El texto de las listas no ordenadas que estén dentro del bloque identificado como “ultimo” debe ser 
+    amarillo pero si es un enlace a otra página debe ser azul.
+
+        #ultimo {
+            color: yellow;
+        }
+
+        #ultimo a{
+            color: azul;
+        }
+
+    4. Los elementos identificados como “importante” dentro de cualquier bloque deben ser verdes, pero si 
+    están dentro de un título deben ser rojos.
+
+        div #importante {
+            color: green;
+        }
+
+        h1 #importante, h2 #importante, h3 #importante, h4 #importante, h5 #importante, h6 #importante {
+            color: red;
+        }
+
+    5. Todos los elementos h1 que especifique el atributo title, cualquiera que sea su valor, deben ser azules.
+
+        h1[title] {
+            color: blue;
+        }
+
+    6. El color de los enlaces en las listas ordenadas debe ser azul para los enlaces aún no visitados, y violeta 
+    para los ya visitados y, además, no deben aparecer subrayados. 
+
+        ol a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        ol a:visited {
+            color: violet;
+            text-decoration: none;
+        }
+
+Ejercicio 6
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC
+    html401-19991224/loose.dtd"> 
+    <HTML lang=es xmlns="http://www.w3.org/1999/xhtml"> 
+        <HEAD>
+            <TITLE>Página Principal</TITLE> 
+            <META http-equiv=Content-Type content="text/html; charset=iso-8859-1"></META>
+            <link rel="stylesheet" href="estilo2.css"> 
+        </HEAD> 
+        <BODY> 
+            <DIV id=encabezado><H1>ASIGNATURA ELECTIVA</H1></DIV> 
+            <DIV id=contenido> 
+                <H2>Contenido</H2> 
+                <p>En esta asignatura ...........................<BR></p> 
+                <P>El objetivo fundamental ..................</P> 
+                <P>etc., etc., ...........................................</P> 
+                <P>etc., etc., ...........................................</P> 
+                <P>Adem&aacute;s, ...........................................</P> 
+                <P>etc., etc., ...........................................</P> 
+                <P class="resaltado">Pero, lo más importante es ..............................</P> 
+                <P class="resaltado">etc., etc., ...........................................</P> 
+                <P>Y, entonces, podemos continuar con ..................</P> 
+                <P>etc., etc., ...........................................</P> 
+                <P>&nbsp;</P> 
+            </DIV> 
+            <DIV id=menu > 
+                <H3>Enlaces</H3> 
+                <UL class="vineta"> 
+                    <LI><A href="http://www.e-style.com.ar/moodle" target=_blank>Curso Actual</A></LI> 
+                    <LI><A href="http://www.e-style.com.ar/logica" target=_blank>Curso anterior</A> </LI> 
+                    <LI><A href="http://www.e-style.com.ar/ntedu/consultas.htm" target=_blank>Contacto</A></LI> 
+                </UL> 
+            </DIV> 
+            <DIV id=pie class="estilopie">Ingeniería en Sistemas de Información - Universidad Tecnológica Nacional Rosario</DIV> 
+            <p>&nbsp;</p> 
+        </BODY> 
+    </HTML>
