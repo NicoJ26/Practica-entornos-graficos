@@ -1,0 +1,53 @@
+Ejercicio 1: 
+    $a tipo boolean (TRUE)
+    $b tipo string ("xyz")
+    $c tipo string ('xyz')
+    $d tipo integer (12)
+    $f tipo integer (resultado de doble($d++), luego modificado)
+    $g tipo integer (igual a $f después de += 10)
+
+    OPERADORES
+        = : asignación
+        * : multiplicación
+        += : suma y asignación
+        ++ : incremento (++$d preincremento, $d++ postincremento)
+        ?: : operador ternario condicional
+        , en echo : separa múltiples parámetros de salida
+        
+    FUNCIONES Y PARAMETROS
+        function doble($i)
+            Parametro: $i
+        
+        gettype($variable)
+            Parametro: $variable
+
+        is_int($d)
+            Parametro: $d
+        
+        is_string($a)
+            Parametro: $a
+    
+    ESTRUCTURAS DE CONTROL
+        if (is_int($d)) { $d += 4; }
+        if (is_string($a)) { echo "Cadena: $a"; }
+        $d = $a ? ++$d : $d*3;
+        Ternario: si $a es verdadero, usa ++$d; si no, usa $d*3
+
+    SALIDA POR PANTALLA
+        La salida producida por echo es: booleanstringstringinteger1xyzxyz184444
+
+Ejercicio 2:
+    a- Son equivalentes
+    b- Son equivalentes
+    c- Son equivalentes
+
+Ejercicio 3:
+    a- Genera una tabla de 5 filas por 2 columnas utilando el 90% del ancho
+    b- Genera un formulario que solicita la edad del usuario y al enviarse, determina mediante una condición si la persona es mayor o menor de edad.
+
+Ejercicio 4:
+    <?php 
+        echo "El $flor $color \n"; /*La variable del include todavia no existe porque aun no se ejecuto, por lo que su salida de este echo va a ser "El"*/  
+        include 'datos.php'; 
+        echo " El $flor $color"; /*La salida de este echo va a ser "EL clavel blanco"*/ 
+    ?>  

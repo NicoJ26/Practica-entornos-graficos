@@ -1,0 +1,14 @@
+Ejercicio 1: 
+    Si, los codigos proporcionados son equivalentes.
+
+Ejercicio 2:
+    a- bar
+       true
+    b- 5
+       9
+       42
+    c- No produce ningun salida ya que "unset(matriz)" borra completamente la variable matriz.
+
+Ejercicio 3:
+   a- Muestra un mensaje que dice "Has entrado en esta pagina a las (horas, minutos y segundos) del (dia/mes/año)"
+   b- 5 + 6 =11
